@@ -4,5 +4,12 @@ class Post < ApplicationRecord
     validates :summary, length: { maximum: 250 }
     validates :category, inclusion: { in: %w(Fiction Non-Fiction) }
     validates :title, exclusion: { in: ["True Facts"] }
+    # validate :won_believe, :secret, :top_num, :guess
 
+    # def won_believe
+    #     if title != "Wont't Believe"
+    #         error.add(:title, "Title invalid")
+    #     else
+
+    # end
 end
